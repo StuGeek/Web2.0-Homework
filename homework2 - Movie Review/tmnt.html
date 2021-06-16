@@ -1,0 +1,206 @@
+<!--18322081杨宗恺，作业内容为为电影评论网站Rancid Tomatoes创建一个页面，
+	用于电影TMNT。此文件为为创建电影评论网站的html文件-->
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<title>TMNT - Rancid Tomatoes</title>
+		<link href="css/movie.css" type="text/css" rel="stylesheet" />
+		<!--该页面应具有图像目录中的rotten.gif的“收藏夹图标”或“网页图标” -->
+		<link href="http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/rotten.gif?version=1&modificationDate=1268939585000&api=v2" 
+        type="image/gif" rel="shortcut icon"/>
+	</head>
+
+	<body>
+		<!--横幅图像-->
+		<div class = "banner">
+			<img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/banner.png" alt="Rancid Tomatoes" />
+		</div>
+
+		<!--居中标题-->
+		<h1>TMNT (2007)</h1>
+		
+		<!--整体内容区域，包含该电影的总体32％的评分，一些评论家的评论以及右侧的电影概述-->
+		<div id="overall-content">
+			<!--右侧的电影整体概述部分-->
+			<div class ="general-overview">
+					<!--整体概述部分的电影图片部分-->
+					<img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/generaloverview.png" alt="general overview" />
+
+				<!--整体概述部分的电影有关信息的列表部分-->
+				<div id="list">
+					<dl>
+						<dt>STARRING</dt>
+						<dd>Mako <br /> Sarah Michelle Gellar</dd>
+
+						<dt>DIRECTOR</dt>
+						<dd>Kevin Munroe</dd>
+
+						<dt>RATING</dt>
+						<dd>PG</dd>
+
+						<dt>THEATRICAL RELEASE</dt>
+						<dd>Mar 23, 2007</dd>
+
+						<dt>MOVIE SYNOPSIS</dt>
+						<dd>After the defeat of their old arch nemesis, The Shredder, the Turtles have grown apart as a family.</dd>
+
+						<dt>MPAA RATING</dt>
+						<dd>PG, for animated action violence, some scary cartoon images and mild language</dd>
+
+						<dt>RELEASE COMPANY</dt>
+						<dd>Warner Bros.</dd>
+
+						<dt>GENRE</dt>
+						<dd>Action/Adventure, Comedies, Childrens, Martial Arts, Superheroes, Ninjas, Animated Characters</dd>
+
+						<dt>OFFICIAL MOVIE SITE</dt>
+						<dd><a href="http://www.tmnt.com/">The Official TMNT Site</a></dd>
+					</dl>
+				</div>
+			</div>
+
+			<!--整个内容区域的左中部分，其中包含32％的整体评分和评论家对电影的评论-->
+			<div class ="left-central">
+				<!--整体评分部分，其中包含一个Rotten图像，32%的评分，和评价总数为88条的一行信息-->
+				<div class="overall-rating">
+					<img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/rottenbig.png" alt="Rotten" />
+					<span class="rating">32%</span> <span class="reviews-total">(88 reviews total)</span>
+				</div>
+				
+				<!--两列电影评论的左边的第一列-->
+				<div class="reviews-left">
+					<!--评论的总体信息，包含评论和评论者的个人信息-->
+					<div class="review">
+						<!--评论部分-->
+						<p class="comments">
+							<!--显示评论者是喜欢还是不喜欢电影的图标-->
+							<img class="icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/rotten.gif" alt="Rotten" />
+							<q>Ditching the cheeky, self-aware wink that helped to excuse the concept's inherent corniness, the movie attempts to look polished and 'cool,' but the been-there animation can't compete with the then-cutting-edge puppetry of the 1990 live-action movie.</q>
+						</p>
+						<!--评论者的个人信息部分，包括评论者的姓名和出版社-->
+						<div class="personal-information">
+							<!--评论者图标-->
+							<img class="reviewer reviewer-icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/critic.gif" alt="Critic" />
+							<div class="reviewer">
+								Peter Debruge <br />
+								<!--出版社-->
+								<span class="publication">Variety</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="review">
+						<p class="comments">
+							<img class="icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/fresh.gif" alt="Fresh" />
+							<q>TMNT is a fun, action-filled adventure that will satisfy longtime fans and generate a legion of new ones.</q>
+						</p>
+						<div class="personal-information">
+							<img class="reviewer reviewer-icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/critic.gif" alt="Critic" />
+							<div class="reviewer">
+								Todd Gilchrist <br />
+								<span class="publication">IGN Movies</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="review">
+						<p class="comments">
+							<img class="icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/rotten.gif" alt="Rotten" />
+							<q>It stinks!</q>
+						</p>
+						<div class="personal-information">
+							<img class="reviewer reviewer-icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/critic.gif" alt="Critic" />
+							<div class="reviewer">
+								Jay Sherman (unemployed)
+							</div>
+						</div>
+					</div>
+
+					<div class="review">
+						<p class="comments">
+							<img class="icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/rotten.gif" alt="Rotten" />
+							<q>The rubber suits are gone and they've been redone with fancy computer technology, but that hasn't stopped them from becoming dull.</q>
+						</p>
+						<div class="personal-information">
+							<img class="reviewer reviewer-icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/critic.gif" alt="Critic" />
+							<div class="reviewer">
+								Joshua Tyler <br />
+								<span class="publication">CinemaBlend.com</span>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<!--两列电影评论的右边的第二列-->
+				<div class="reviews-right">
+					<div class="review">
+						<p class="comments">
+							<img class="icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/rotten.gif" alt="Rotten" />
+							<q>The turtles themselves may look prettier, but are no smarter; torn irreparably from their countercultural roots, our superheroes on the half shell have been firmly co-opted by the industry their creators once sought to spoof.</q>
+						</p>
+						<div class="personal-information">
+							<img class="reviewer reviewer-icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/critic.gif" alt="Critic" />
+							<div class="reviewer">
+								Jeannette Catsoulis <br />
+								<span class="publication">New York Times</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="review">
+						<p class="comments">
+							<img class="icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/rotten.gif" alt="Rotten" />
+							<q>Impersonally animated and arbitrarily plotted, the story appears to have been made up as the filmmakers went along.</q>
+						</p>
+						<div class="personal-information">
+							<img class="reviewer reviewer-icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/critic.gif" alt="Critic" />
+							<div class="reviewer">
+								Ed Gonzalez <br />
+								<span class="publication">Slant Magazine</span>
+							</div>
+						</div>
+					</div>
+					
+					<div class="review">
+						<p class="comments">
+							<img class="icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/fresh.gif" alt="Fresh" />
+							<q>The striking use of image and motion allows each sequence to leave an impression. It's an accomplished restart to this franchise.</q>
+						</p>
+						<div class="personal-information">
+							<img class="reviewer reviewer-icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/critic.gif" alt="Critic" />
+							<div class="reviewer">
+								Mark Palermo <br />
+								<span class="publication">Coast (Halifax, Nova Scotia)</span>
+							</div>
+						</div>
+					</div>
+
+					<div class="review">
+						<p class="comments">
+							<img class="icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/rotten.gif" alt="Rotten" />
+							<q>The script feels like it was computer generated. This mechanical presentation lacks the cheesy charm of the three live action films.</q>
+						</p>
+						<div class="personal-information">
+							<img class="reviewer reviewer-icon" src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/critic.gif" alt="Critic" />
+							<div class="reviewer">
+								Steve Rhodes <br />
+								<span class="publication">Internet Reviews</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<!--该条信息表示该页面显示了总评论条数88条中的1-8条-->
+			<p id="shows-reviews">(1-8) of 88</p>
+		</div>
+		
+		<!--指向W3C验证器的两个链接-->
+		<div class ="W3C-validators">
+			<a href="http://validator.w3.org/check/referer"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/w3c-xhtml.png" alt="Valid XHTML 1.1" /></a> <br />
+			<a href="http://jigsaw.w3.org/css-validator/check/referer"><img src="http://www.cs.washington.edu/education/courses/cse190m/09sp/homework/2/w3c-css.png" alt="Valid CSS!" /></a>
+		</div>
+		
+	</body>
+</html>

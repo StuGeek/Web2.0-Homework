@@ -1,0 +1,125 @@
+/*18322081杨宗恺,拼图游戏的css文件puzzle.css，改进：将中间边框与周围的边框的宽度调整一致*/
+h1 {
+    text-align: center;
+    font-family: STXihei, "Century Gothic", sans-serif;
+    font-size: 40px;
+}
+/*整个拼图游戏在页面居中*/
+#puzzle_container {
+    width: 935px;
+    height: 630px;
+    margin-left: auto;
+    margin-right: auto;
+}
+/*显示游戏信息的提示框*/
+#tooltips{
+    margin-top: 0%;
+    font-size: 30px;
+    text-align: center;
+    font-family: STXihei, "Century Gothic", sans-serif;
+    font-weight: bold;
+    padding-bottom: 5px;
+}
+#display_window{
+    height: 20px;
+}
+/*迷宫游戏居中*/
+#game_interface{
+    width: 354px;
+    height: 354px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+/*重新开始游戏按钮，蓝底白字，有阴影效果*/
+#restart-game{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: #3684F8;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    position: relative;
+    left: 410px;
+    font-weight: bold;
+    margin-top: 50px;
+    width: 120px;
+    height: 40px;
+    box-shadow: 3px 5px 10px black;
+    border: none;
+    outline: none;
+}
+/*鼠标移到文字上，按钮会变大*/
+#restart-game:hover{
+    transform: scale(1.1);
+    outline: #3684F8;
+}
+/*图片块的样式*/
+.picture_block{
+    width: 86.5px;
+    height: 86.5px;
+    cursor: pointer;
+    position: absolute;
+    background-image: url("http://hcp.sysu.edu.cn/wiki/download/attachments/32833552/panda.jpg?version=2&modificationDate=1447621761000&api=v2");
+    border: 2px solid #A7A7A5;
+    transition: all 0.2s;
+    -o-transition: all 0.2s;
+    -moz-transition: all 0.2s;
+    -webkit-transition: all 0.2s;
+    overflow: hidden;
+}
+/*用行和列来定位图片块的位置*/
+.col_1{
+    left: 0px;
+}
+.col_2{
+    left: 88px;
+}
+.col_3{
+    left: 176px;
+}
+.col_4{
+    left: 264px;
+}
+.row_1{
+    top: 0px;
+}
+.row_2{
+    top: 88px;
+}
+.row_3{
+    top: 176px;
+}
+.row_4{
+    top: 264px;
+}
+/*定位每个图片块显示的背景图片的部分*/
+#background_1, #background_5, #background_9, #background_13{
+    background-position-x: 0px;
+}
+#background_2, #background_6, #background_10, #background_14{
+    background-position-x: -88px;
+}
+#background_3, #background_7, #background_11, #background_15{
+    background-position-x: -176px;
+}
+#background_4, #background_8, #background_12, #background_16{
+    background-position-x: -264px;
+}
+#background_1, #background_2, #background_3, #background_4{
+    background-position-y: 0px;
+}
+#background_5, #background_6, #background_7, #background_8{
+    background-position-y: -88px;
+}
+#background_9, #background_10, #background_11, #background_12{
+    background-position-y: -176px;
+}
+#background_13, #background_14, #background_15, #background_16{
+    background-position-y: -264px;
+}
+#background_16{
+    background-image: none;
+    border: none;
+}

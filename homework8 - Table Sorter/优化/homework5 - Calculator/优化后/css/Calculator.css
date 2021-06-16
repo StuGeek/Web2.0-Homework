@@ -1,0 +1,87 @@
+/*18322081杨宗恺，此文件为计算器的Calculator.css文件，
+实现对计算器界面外观和样式的设计*/
+
+body{
+    /*设置页面整体的背景图片*/
+    background-image: url(https://ss0.baidu.com/6ON1bjeh1BF3odCf/it/u=601474427,4239909837&fm=27&gp=0.jpg);
+    background-size: cover;
+}
+
+/*计算器包括标题整体界面在页面居中，边框为圆角样式
+背景颜色接近白色，并向左下方有阴影效果实现立体感*/
+#interface-container{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 50px;
+    border-radius: 5%;
+    background-color:#f8f8f8;
+    box-shadow: -5px 7px #E9EFF1;
+    width: 400px;
+    height: 645px;
+    overflow: hidden;
+}
+
+/*显示结果的界面框图边框为黑色，字体为55px大小蓝色，靠右，背景接近白色*/
+#result{
+    color: rgb(97, 198, 242);
+    background-color: rgba(255, 255, 255, 0.979);
+    padding-right: 10px;
+    width: 380px;
+    height: 70px;
+    font-size: 55px;
+    text-align: right;
+    border: 2px solid black;
+}
+
+/*简单计算器五个字为50px蓝色仿宋字体，居中*/
+h1{
+    text-align: center;
+    color: rgb(64, 113, 204);
+    font-family: FangSong;
+    font-size: 50px;
+}
+
+/*按钮为圆形，字体基础大小都为25px,
+没有边框样式，点击下去后也不会显示边框*/
+button {
+    width: 70px;
+    height: 70px;
+    font-size: 25px;
+    margin-top: 10px;
+    margin-left: 20px;
+    border-radius: 50%;
+    border-style: none;
+    outline: none;
+}
+
+/*点击按钮后，按钮会变灰，表现点击效果*/
+button:active{
+    background-color: #f8f8f8;
+}
+
+/*数字按钮的字体颜色为rgb(97, 198, 242)，
+背景颜色为白色，有偏灰色的阴影表现立体感*/
+.number-button{
+    color: rgb(97, 198, 242);
+    background-color: white;
+    box-shadow: 0px 8px 4px #e9f1f3;
+}
+
+/*计算按钮的字体颜色为白色，大小为30px，
+背景颜色为rgb(38, 184, 247)，
+有偏蓝色的阴影表现立体感*/
+.calculator-button{
+    color:  white;
+    background-color: rgb(38, 184, 247);
+    box-shadow: 0px 5px 4px rgb(195, 233, 250);
+    font-size: 30px;
+}
+
+/*功能按钮的字体颜色为白色，
+背景颜色为rgb(139, 214, 247)，
+有偏淡蓝色的阴影表现立体感*/
+.function-button{
+    color: white;
+    background-color:  rgb(139, 214, 247);
+    box-shadow: 0px 5px 4px #dbf2f8;
+}

@@ -1,0 +1,203 @@
+/*18322081杨宗恺，此文件为tmnt.html的css样式表*/
+body{
+    /*
+    整个页面的背景图像为background.png。
+    整个页面的主体没有边距或填充，因此其内容延伸到浏览器窗口的边缘。
+    页面上的文本使用8pt字体。
+    文本的首选字体是Verdana，Tahoma或系统上可用的任何sans-serif字体。
+    */
+    background-image: url(http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/background.png?version=1&modificationDate=1268939512000&api=v2);
+    margin: 0px;
+    padding: 0px;
+    font-size: 8pt;
+    font-family: Verdana, Tahoma, sans-serif;
+    
+}
+.banner{
+    /*
+    页面顶部包含图像横幅。此横幅的中心是图像banner.png。在此横幅广告的后面，
+    将在页面的整个长度上水平重复图像bannerbackground.png。这些图像中的每一个都是50px高。
+    */
+    text-align: center;
+    background-image: url(http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/bannerbackground.png?version=1&modificationDate=1268939512000&api=v2);
+    background-repeat: repeat-x;
+    height: 50px;
+}
+h1{
+    /*
+    居中标题以24pt粗体显示
+    此标题的首选字体是Tahoma，Verdana或系统上可用的任何sans-serif字体
+    */
+    font-size: 24pt;
+    font-weight: bold;
+    text-align: center;
+    font-family: Tahoma, Verdana, sans-serif;
+}
+#overall-content{
+    /*
+    页面的整体内容区域的总宽度为800px，在页面内水平居中。
+    如果页面水平调整大小，则此800px部分应动态移动，以使其在页面上保持水平居中。
+    整体内容区域具有4px尺寸的灰色实线边界，必须大到足以容纳所有的内容。
+    */
+    width: 800px;
+    border: 4px solid  grey;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0px;
+    position: relative;
+    overflow: hidden;
+}
+
+.left-central{
+    /*
+    左中部分的宽为550px
+    */
+    width: 550px;
+}
+.overall-rating{
+    /*
+    左中部分的顶部是一个较小的部分，其中包含（rottenbig.png）。
+    在此图像后面，图像rottenbackground.png在该部分的整个长度上水平重复。
+    图像的高度为83px。
+    */
+    height: 83px;
+    background-image: url(http://hcp.sysu.edu.cn/wiki/download/attachments/32833570/rottenbackground.png?version=1&modificationDate=1268939585000&api=v2);
+    background-repeat: repeat-x;
+}
+.rating{
+    /*
+    影片的总体评价以48pt红色粗体显示,
+    并与图像正确垂直对齐
+    */
+    color:red;
+    font-size: 48pt;
+    font-weight: bold;
+    position: relative;
+    bottom: 13px;
+}
+.reviews-total{
+    /*
+    评论总数以白色的8pt标准字体显示，
+    并与图像正确垂直对齐
+    */
+    color: white;
+    font-size: 8pt;
+    font-style: normal;
+    position: relative;
+    bottom: 13px;
+}
+
+/*
+在总体评分部分下面，有两列评论。
+每列均占页面整个左中部分宽度的47％。
+列与相邻内容之间的水平间距为2％。
+*/
+.reviews-left, .reviews-right{
+    width: 47%;
+    margin-left: 2%;
+    float: left;
+}
+.comments{
+    /*
+    评论者对电影的评论以粗体8pt字体表示，
+    评论具有背景色为＃E1D697，2px厚的灰色边框。
+    评论框的内容与其边框分开8px，
+    */
+    font-size: 8pt;
+    font-weight: bold;
+    background-color: #E1D697;
+    border: 2px solid grey;
+    padding: 8px;
+    min-height: 25px;
+}
+.icon{
+    /*
+    图标位于引号框的左侧，
+    其与文本之间的间隔为5px，
+    文本根据需要环绕这些图像。
+    */
+    float: left;
+    padding-right: 5px;
+    padding-bottom: 5px;
+}
+.review{
+    /*
+    评论之间有3em的垂直空间。
+    */
+    margin-bottom: 3em;
+    overflow: hidden;
+}
+.reviewer-icon{
+    /*
+    评论者图标与文本之间有5px的水平间隔。
+    */
+    padding-right: 5px;
+}
+.reviewer{
+    float: left;
+}
+.publication{
+    /*
+    出版社为斜体
+    */
+    font-style: italic;
+}
+
+.general-overview{
+    /*
+    评论家评论的右侧是页面的“概述”部分，
+    此部分的宽度为250px。
+    */
+    width: 250px;
+    float: right;
+}
+#list{
+    /*
+    该部分的边缘与列表文字之间有10px的间距。
+    概述的内容使用＃A2B964的背景色。
+    其文本以Arial的8pt字体或系统上可用的任何sans-serif字体显示。
+    */
+    padding: 10px;
+    background-color: #A2B964;
+    font-size: 8pt;
+    font-family: Arial, sans-serif;
+    margin: 0px;
+    margin-top: -5px;
+}
+dt{
+    /*
+    这个部分包括有关电影的定义列表每个术语均以粗体显示,
+    */
+    font-weight: bold;
+}
+dd{
+    /*
+    并且与之前的元素之间有1em的垂直分隔。
+    */
+    margin-bottom: 1em;
+}
+
+#shows-reviews{
+    /*
+    评论的下方是一个带有居中文本的栏,
+    背景色为＃A2B964，
+    并直接与周围的内容放在一起,
+    5px分隔文本的边缘和元素自己的外部边缘。
+    */
+    text-align: center;
+    background-color: #A2B964;
+    margin: 0px;
+    padding: 5px;
+    bottom: 0px;
+    clear: right;
+}
+.W3C-validators{
+    /*
+    没有边框。
+    W3C图像始终出现在页面的右下角，无论是页面首次出现时还是滚动之后。
+    */
+    position: fixed;
+    border-style: none;
+    bottom: 0px;
+    right: 0px;
+}

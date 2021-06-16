@@ -1,0 +1,61 @@
+/*18322081杨宗恺，此文件为pie.html的css样式表*/
+body{
+    /*页面主体为白色背景*/
+    background-color: white;
+    /*将整个页面设置为使用silverware.jpg的背景图像（使用绝对URL链接到所有图像）。图像应在页面的两个方向上重复，并且在滚动页面时不应移动。*/
+    background-image: url(https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/silverware.jpg);
+    background-repeat: repeat;
+    background-attachment: fixed;
+}
+h1, h2{
+    /*页面上的所有标题的文字颜色均应使用（红色= 164，绿色= 164，蓝色= 0），
+    并使用（红色= 240，绿色= 240，蓝色= 240）的背景色。
+    标题的字体系列是Century Gothic，Futura，Verdana或系统上可用的任何sans-serif字体。
+    所有标题都应加下划线。
+    */
+    color: rgb(164, 164, 0);
+    background-color: rgb(240, 240, 240);
+    font-family: "Century Gothic", Futura, Verdana, sans-serif;
+    text-decoration: underline;
+    /*通过在所有标题中的相邻字母之间放置0.2em的水平间距来加宽页面上的所有标题。*/
+    letter-spacing: 0.2em;
+}
+h1{
+    /*页面的主标题与页面主体的中心对齐，并使用22pt粗体字体。*/
+    font-size: 22pt;
+    font-weight: bold;
+    text-align: center;
+}
+h2{
+    /*页面上的其他标题左对齐并以18pt普通字体显示。*/
+    font-size: 18pt;
+    font-weight: normal;
+    text-align: left;
+}
+p, ul, li{
+    /*正文段落中的文本的文字颜色应为（红色 = 64，绿色 = 64，蓝色 = 64），
+    并使用11pt字体。页面文本的字体系列是Georgia，Garamond或系统上可用的任何衬线字体。*/
+    color: rgb(64, 64, 64);
+    font-size: 11pt;
+    font-family: Georgia, Garamond, serif;
+    
+}
+.major-steps{
+    /*主要步骤用粗体格式*/
+    font-weight: bold;
+}
+a{
+    /*页面上的任何链接都应使用颜色（红色= 164，绿色= 164，蓝色= 0），以匹配页面标题的颜色*/
+    color: rgb(164, 164, 0);
+    /*消除页面底部W3C图像周围的黄色边框。*/
+    border-style: none;
+}
+blockquote{
+    /*用户的评价以斜体形式显示为带有背景颜色（红色= 255，绿色= 255，蓝色= 200）的缩进块。*/
+    font-style: italic;
+    background-color: rgb(255, 255, 200);
+}
+ul{
+    /*设置页面上所有项目符号的项目列表，以将图像用作项目符号图标，而不是普通的黑色圆圈。使用pie_icon.gif的图像（使用绝对URL链接到所有图像）。*/
+    list-style: square url(https://courses.cs.washington.edu/courses/cse190m/09sp/homework/1/pie_icon.gif);
+}

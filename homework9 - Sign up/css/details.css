@@ -1,0 +1,38 @@
+/*18322081杨宗恺,用户详情界面的css文件details.css*/
+html{
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606382491830&di=175103e6c4f3f60c9f3dc25b4c707935&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F19%2F20150319233453_Cmh4c.thumb.700_0.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606382050887&di=f8a1a22950cb9be4973a517c900b2013&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F11%2F20150311225002_FsmKK.thumb.700_0.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    height: 500px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px 2px black;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+#information{
+    width: 400px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+    top: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 20px;
+}
+p{
+    margin-top: 20px;
+}

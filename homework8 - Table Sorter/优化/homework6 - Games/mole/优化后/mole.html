@@ -1,0 +1,40 @@
+<!--18322081杨宗恺,打地鼠游戏的html文件mole.html-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Whac-a-mole</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/mole.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+    <script src="js/mole.js"></script>
+</head>
+
+<body>
+    <h1>Whac-a-mole</h1>
+    <!--便于定位，整个打地鼠游戏的容器-->
+    <div id="mole_container">
+        <!--打地鼠游戏上方的提示信息，包括开始/结束游戏的按钮、时间、游戏状态、计分等信息-->
+        <div id="tooltips">
+            <p>Test your skill. How many boxes(moles) can you check(hit) in 30 seconds？</p>
+            <div id="display_window">
+                <button id="game_button">Start Game | Stop Game</button>
+                <span class="time">Time:<input id="time" disabled="disabled"/></span>
+                <input id="game_situation" disabled="disabled"/>
+                <span class="score">Score:<input id="score" disabled="disabled"/></span>
+            </div>
+        </div>
+        <!--打地鼠游戏界面-->
+        <div id="game_interface"></div>
+        <div id="introduction">
+            <p><strong>Instruction:</strong></p>
+            <ol>
+                <li>Click on the radio buttons(moles) as they are selected randomly by the computer.</li>
+                <li>1 point per hit, minus 1 point per miss.</li>
+            </ol>
+        </div>
+    </div>
+</body>
+
+</html>

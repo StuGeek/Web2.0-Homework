@@ -1,0 +1,36 @@
+/*18322081杨宗恺，此文件为index.html的css样式表*/
+body{
+    background: white;
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1599665906447&di=aafe99a19656ae33cb73144389d96d4c&imgtype=0&src=http%3A%2F%2Fbpic.588ku.com%2Felement_origin_min_pic%2F00%2F93%2F98%2F1156f2b42e10228.jpg);
+    background-repeat: repeat;
+}
+h1{
+    /*主标题的文字颜色均应使用（红色= 25，绿色= 0，蓝色= 164），
+    页面的主标题与页面主体的中心对齐，并使用50pt粗体字体，
+    并且不使用背景色。
+    主标题的字体系列是Century Gothic，Futura，Verdana或系统上可用的任何sans-serif字体。
+    */
+    color: rgb(25, 0, 164);
+    font-size: 50pt;
+    font-weight: bold;
+    text-align: center;
+    background-color: unset;
+    font-family: "Century Gothic", Futura, Verdana, sans-serif;
+    /*通过在所有标题中的相邻字母之间放置0.1em的水平间距来加宽页面上的所有标题。*/
+    letter-spacing: 0.1em;
+}
+a{
+    color: black;
+}
+/*公司标语格式居右，并用20pt字体，颜色为（红色= 0，绿色= 71，蓝色= 164）*/
+.slogan{
+    text-align: right;
+    font-size: 20pt;
+    color: rgb(0, 71, 164);
+}
+/*主要畅销产品介绍格式居中，并用30pt黑色字体*/
+.introduction{
+    text-align: center;
+    font-size: 30pt;
+    color: black;
+}

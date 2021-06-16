@@ -1,0 +1,19 @@
+//作业9 Signup经过看老师的教学视频重写后复用的detail.jade文件
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/detail.css')
+  h1 用户详情
+  div#information
+    if error
+      div.error.server!= error
+      
+    p 用户名 #{user.username}
+
+    p 学号 #{user.number}
+
+    p 电话 #{user.phone}
+
+    p 邮箱 #{user.email}
+
+    a.detail-signout(href='/signout') 退出

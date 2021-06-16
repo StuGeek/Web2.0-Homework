@@ -1,0 +1,57 @@
+<!--18322081杨宗恺,迷宫游戏的html文件maze.html-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>The Amazing Mouse Maze</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="css/maze.css">
+    <script src="js/maze.js"></script>
+</head>
+
+<body>
+    <h1>The Amazing Mouse Maze!</h1>
+    <!--便于定位，整个迷宫游戏的容器-->
+    <div id="maze_container">
+        <!--迷宫游戏上方的提示信息，包括提示游戏输赢信息的提示栏-->
+        <div id="tooltips">
+            <p>Move your mouse over the "S" to begin.</p>
+            <p id="display_window"></p>
+        </div>
+        <!--迷宫游戏，从上到下分成三部分，便于定义不同的墙和路-->
+        <div id="maze">
+            <div id="top_maze">
+                <!--对于墙，游戏开始后如果鼠标移到墙上，会触发撞墙函数，移开后会初始化游戏-->
+                <div id="top_wall" class="wall"></div>
+            </div>
+            <div id="middle_maze">
+                <div id="left_wall" class="wall"></div>
+                <!--鼠标移到路上是会判断是否在路上，如果在，说明鼠标在迷宫内部-->
+                <div id="middle_left_road"></div>
+                <div id="middle_center_road"></div>
+                <div id="middle_right_road"></div>
+                <div id="right_wall" class="wall"></div>
+                <div id="left_road">
+                    <!--开始标志，鼠标移动到上面会开始游戏-->
+                    <div id="start">S</div>
+                </div>
+                <div id="center_wall" class="wall"></div>
+                <div id="right_road">
+                    <!--结束标志，鼠标移开后会初始化游戏-->
+                    <div id="end">E</div>
+                </div>
+            </div>
+            <div id="bottom_maze">
+                <div id="bottom_wall" class="wall"></div>
+            </div>
+        </div>
+        <div id="introduction">
+            <p>The object of this game is to guide the mouse cursor through the start area and get to the end area. Be sure to avoid the walls:</p>
+            <div id="wall_case"></div>
+            <p>Good luck!<br/></p>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,76 @@
+/*18322081杨宗恺,注册界面的css文件signIn.css*/
+html{
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606382491830&di=175103e6c4f3f60c9f3dc25b4c707935&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F19%2F20150319233453_Cmh4c.thumb.700_0.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+body{
+    background-image: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1606382050887&di=f8a1a22950cb9be4973a517c900b2013&imgtype=0&src=http%3A%2F%2Fb-ssl.duitang.com%2Fuploads%2Fitem%2F201503%2F11%2F20150311225002_FsmKK.thumb.700_0.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 800px;
+    height: 500px;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid white;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 100px;
+    border-radius: 5%;
+    box-shadow: 1px 1px 1px 2px black;
+}
+h1{
+    text-align: center;
+    font-weight: bold;
+}
+form{
+    width: 700px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    font-size: 20px;
+    position: relative;
+}
+#input-information{
+    width: 310px;
+    height: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: right;
+}
+#tooltips-container{
+    width: 300px;
+    height: 350px;
+    text-align: left;
+    position: absolute;
+    top: 0px;
+    right: -50px;
+}
+.tooltips{
+    margin-top: 38px;
+    height: 24px;
+    font-size: 15px;
+}
+input{
+    margin-top: 40px;
+    left: 20px;
+    margin-right: 80px;
+    border-radius: 0%;
+    border-style: solid;
+    border-color: black;
+    position: relative;
+}
+input[type='submit'], input[type='reset']{
+    width: 50px;
+    height: 30px;
+    margin-left: 0px;
+    margin-right: 60px;
+    left: 10px;
+    outline: none;
+    color: white;
+    border-radius: 10%;
+    background-color:rgb(65, 84, 192);
+}
+.wrong_format{
+    border-color: red;
+}

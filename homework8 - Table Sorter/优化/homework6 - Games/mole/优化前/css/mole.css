@@ -1,0 +1,97 @@
+/*18322081杨宗恺,打地鼠游戏的css文件mole.css*/
+h1 {
+    text-align: center;
+    font-family: STXihei, "Century Gothic", sans-serif;
+}
+/*整个打地鼠游戏在页面居中*/
+#mole_container {
+    width: 935px;
+    height: 630px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#tooltips, #introduction {
+    font-family: STXihei, "Century Gothic", sans-serif;
+}
+/*打地鼠游戏上方的提示信息的样式调整*/
+#tooltips{
+    margin-top: 0%;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+#tooltips>p{
+    margin: 5px;
+}
+#display_window{
+    height: 100px;
+    position: relative;
+}
+#game_button, #time, #game_situation, #score{
+    height: 25px;
+    position: absolute;
+    background-color: white;
+    font-size: 17px;
+}
+#game_button{
+    width: 220px;
+    left: 250px;
+    border-radius: 5px;
+    border-color: #E9E9E9;
+    outline: none;
+}
+#game_situation{
+    left:250px;
+    width: 190px;
+}
+#game_situation, .score{
+    bottom: 25px;
+}
+.time, .score{
+    position: absolute;
+    right: 320px;
+}
+#time, #score{
+    width: 90px;
+    margin-left: 5px;
+}
+/*打地鼠游戏居中，上方和下方显示边框*/
+#game_interface{
+    width: 363px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+#introduction{
+    font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    font-weight: bold;
+    margin-top: 50px;
+    width: 1100px;
+    height: 120px;
+}
+#introduction>p{
+    margin-left: -20px;
+    font-size: 24px;
+}
+/*打地鼠洞的样式和排版距离*/
+.hole{
+    width: 18px;
+    height: 18px;
+    margin-top: 10px;
+    margin-left: 9px;
+    margin-right: 9px;
+    border-color: red;
+}
+input:checked{
+    border: 2px solid black;
+    background-color: red;
+}

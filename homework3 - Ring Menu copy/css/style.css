@@ -1,0 +1,196 @@
+/*
+18322081杨宗恺，此文件为index.html的css样式表,
+实现的动画效果为鼠标移动到@图标时，@图标很快放大
+左下角的五个小图标从@图标的位置由小变大出现在左下角
+上方的大图标从@图标的位置由小变大出现在上方，
+鼠标移开@图标后，停顿约1s后
+上方的大图标由大变小往下消失在@图标处，
+里面的元素在消失过程中保持不变，随大图标一起消失
+左下角的小图标大小不变消失在@图标处，
+里面的元素在消失过程中先直接消失，不随小图标一起消失
+大图标和小图标都消失完后，图标@再由大变小，这个停顿时间约为0.5s
+*/
+
+html, body{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    overflow: hidden;
+}
+
+#at-plus-container{
+    width: 100px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#bottom-positioner{
+    width: 100%;
+    position: absolute;
+    bottom: 0%;
+}
+
+#info-bar{
+    width: 26px;
+    height: 26px;
+    bottom: 97px;
+    position: absolute;
+    left: 77px;
+    border-radius: 50%;
+    background-color: #7E7E7E;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+#button:hover #info-bar{
+    width: 130px;
+    height: 130px;
+    bottom: 150px;
+    left: 25px;
+    border-radius: 50%;
+    background-color: #7E7E7E;
+    opacity: 1;
+}
+
+#info-bar ul{
+    margin: 0px;
+    padding: 0px;
+}
+
+#info-bar li{
+    width: 100%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    text-align: center;
+    margin-left: 0%;
+    color: white;
+    list-style: none;
+}
+
+#info-bar li img{
+    vertical-align: middle;
+}
+
+#info-bar li span{
+    margin-left: 8px;
+}
+
+#info-bar li.mine{
+    width: 45%;
+    color: #26E79E;
+    box-sizing: border-box;
+    display: inline-block;
+}
+
+#info-bar li.posted{
+    padding-left: 15px;
+}
+
+#info-bar li.comment{
+    font-size: 30px;
+    margin: 0px;
+}
+
+#control-ring-container{
+    width: 180px;
+    height: 180px;
+    bottom: 20px;
+    position: absolute;
+    left: 0px;
+    border-radius: 50%;
+}
+
+#control-ring-container li{
+    width: 32px;
+    height: 32px;
+    margin-top: 60px;
+    margin-left: 35px;
+    position: absolute;
+    display: block;
+    background: #686868 center no-repeat;
+    background-size: 18px 18px;
+    list-style: none;
+    border-radius: 50%;
+    transition: all 0.5s;
+    opacity: 0;
+}
+
+#button:hover #control-ring li{
+    opacity: 1;
+}
+
+#button:hover #control-ring li:nth-child(1){
+    margin-top: 20px;
+    margin-left: -30px;
+    background-image: url(../assets/images/nomask.png);
+}
+
+#button:hover #control-ring li:nth-child(2){
+    margin-top: 60px;
+    margin-left: -40px;
+    background-image: url(../assets/images/history.png);
+}
+
+#button:hover #control-ring li:nth-child(3){
+    margin-top: 102px;
+    margin-left: -26px;
+    background-image: url(../assets/images/message.png);
+}
+
+#button:hover #control-ring li:nth-child(4){
+    margin-top: 129px;
+    margin-left: 12px;
+    background-image: url(../assets/images/setting.png);
+}
+
+#button:hover #control-ring li:nth-child(5){
+    margin-top: 128px;
+    margin-left: 60px;
+    background-image: url(../assets/images/signin.png);
+}
+
+#control-ring li span.unread{
+    top: -5px;
+    right: -10px;
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: red;
+    color: #E8D6DC;
+    position: absolute;
+    padding-top: 0px;
+    padding-left: 5px;
+    box-sizing: border-box;
+}
+
+#button{
+    width: 70px;
+    height: 70px;
+    margin: 75px 55px;
+}
+
+#button .apb{
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    bottom: 97px;
+    left: 77px;
+    border-radius: 50%;
+    background: url(../assets/images/atplus_white.png) center no-repeat;
+    background-size: 20px 15px;
+    background-color: #909FCF;
+    transition: all 0.5s;
+}
+
+#button:hover .apb{
+    width: 50px;
+    height: 50px;
+    bottom: 85px;
+    left: 65px;
+    background: url(../assets/images/atplus_green.png) center no-repeat;
+    background-size: 40px 30px;
+    background-color: #383F9F;
+}

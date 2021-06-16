@@ -1,0 +1,202 @@
+/*18322081杨宗恺,迷宫游戏的css文件maze.css*/
+h1 {
+    text-align: center;
+    font-family: STXihei, "Century Gothic", sans-serif;
+}
+/*整个迷宫游戏的位置在页面居中*/
+#maze_container {
+    width: 935px;
+    height: 630px;
+    margin-left: auto;
+    margin-right: auto;
+}
+#tooltips, #introduction {
+    font-family: STXihei, "Century Gothic", sans-serif;
+}
+#tooltips{
+    margin-top: 0%;
+    font-size: 24px;
+    text-align: center;
+    font-weight: bold;
+}
+#tooltips>p{
+    margin: 0%;
+    padding-bottom: 15px;
+}
+#display_window{
+    height: 30px;
+}
+/*迷宫处在居中*/
+#maze{
+    width: 500px;
+    height: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 10px;
+}
+/*路和墙的颜色可以通过取色工具获得*/
+.wall{
+    background-color: #EEEEEE;
+}
+.road{
+    background-color: white;
+    cursor: pointer;
+}
+/*通过绝对定位和相对定位定义迷宫墙和路的关系，并为迷宫加上黑色边框*/
+#top_maze{
+    width: 500px;
+    height: 50px;
+    position: relative;
+}
+#top_wall{
+    width: 496px;
+    height: 48px;
+    position: absolute;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+#middle_maze{
+    width: 500px;
+    height: 200px;
+    position: relative;
+}
+#left_wall, #center_wall, #right_wall, #middle_left_road, #middle_right_road{
+    height: 148px;
+    position: absolute;
+}
+#left_road, #middle_center_road, #right_road{
+    height: 48px;
+    position: absolute;
+}
+#left_wall, #right_wall{
+    width: 146px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+#left_wall{
+    left: 0%;
+}
+#right_wall{
+    right:0%;
+}
+#center_wall{
+    width: 96px;
+    top: 50px;
+    left: 200px;
+    border-top: 2px solid black;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+#middle_left_road, #middle_right_road{
+    width: 50px;
+    border-top: 2px solid black;
+}
+#middle_left_road{
+    left: 150px;
+    top: 0px;
+}
+#middle_right_road{
+    right: 150px;
+    top: 0px;
+}
+#middle_center_road{
+    width: 100px;
+    left: 200px;
+    border-top: 2px solid black;
+}
+#middle_right_wall{
+    right: 0%;
+}
+#middle_left_road{
+    left: 150px;
+}
+#middle_right_road{
+    right: 150px;
+}
+#middle_center_wall{
+    width: 100px;
+    left: 200px;
+}
+#left_road, #right_road{
+    width: 200px;
+    bottom: 0%;
+    border-bottom: 2px solid black;
+}
+#right_road{
+    right: 0%;
+}
+/*定义开始和结束两个小方块的样式*/
+#start, #end{
+    width: 40px;
+    height: 40px;
+    margin-top: 3px;
+    font-size: 35px;
+    text-align: center;
+    position: absolute;
+    border: 2px solid black;
+    font-family: STXihei, "Century Gothic", sans-serif;
+    font-weight: bold;
+    z-index: 1;
+}
+#start{
+    background-color: #83FF82;
+    left: 0%;
+    z-index: 1;
+}
+#end{
+    background-color: #8784FF;
+    right: 0%;
+    z-index: 1;
+}
+#bottom_maze{
+    width: 500px;
+    height: 50px;
+    position: relative;
+}
+#bottom_wall{
+    width: 496px;
+    height: 48px;
+    position: absolute;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-bottom: 2px solid black;
+}
+/*底部游戏规则介绍的样式，文本对齐方式为左对齐*/
+#introduction{
+    font-size: 16px;
+    font-weight: bold;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+    height: 120px;
+}
+#wall_case{
+    border: 2px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100px;
+    height: 25px;
+    background-color: #EEEEEE;
+}
+/*如果游戏开始后鼠标碰到墙，对应的墙变红色*/
+.hitWall{
+    background-color: red;
+}
+/*游戏结果的显示为过渡显示*/
+.hideTheInformation{
+    transition: all 1s;
+    -o-transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    opacity: 0;
+}
+.showTheInformation{
+    transition: all 1s;
+    -o-transition: all 1s;
+    -moz-transition: all 1s;
+    -webkit-transition: all 1s;
+    opacity: 1;
+}

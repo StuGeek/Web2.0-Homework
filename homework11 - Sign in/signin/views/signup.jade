@@ -1,0 +1,47 @@
+//作业9 Signup经过看老师的教学视频重写后复用的signup.jade文件
+extends layout
+
+block content
+  link(rel='stylesheet', href='/stylesheets/style.css')
+  script(type='text/javascript' src='javascripts/validator.js')
+  script(type='text/javascript' src='javascripts/signup.js')
+
+  h1 用户注册
+  div#container
+    form(method='post')
+      if error
+        div.error!= error
+
+      div.field
+        label(for='username') 用户
+        input(id='username' name='username' value=user.username)
+        span.error
+
+      div.field
+        label(for='number') 学号
+        input(id='number' name='number' value=user.number)
+        span.error
+
+      div.field
+        label(for='password') 密码
+        input(id='password' name='password' value=user.password type='password')
+        span.error
+
+      div.field
+        label(for='repeatpassword') 重复密码
+        input(id='repeatpassword' name='repeatpassword' value=user.repeatpassword type='password')
+        span.error
+
+      div.field
+        label(for='phone') 电话
+        input(id='phone' name='phone' value=user.phone)
+        span.error
+
+      div.field
+        label(for='email') 邮箱
+        input(id='email' name='email' value=user.email)
+        span.error
+
+      input.button.reset(type='reset', value='重置')
+      input.button.submit(type='submit', value='提交')
+      a.signin-signup(href='/signin') 登陆

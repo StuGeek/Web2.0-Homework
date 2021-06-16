@@ -1,0 +1,280 @@
+/*
+18322081杨宗恺，此文件为index.html的css样式表,
+实现的动画效果为鼠标移动到@图标时，@图标很快放大
+左下角的五个小图标从@图标的位置由小变大出现在左下角
+上方的大图标从@图标的位置由小变大出现在上方，
+鼠标移开@图标后，停顿约1s后
+上方的大图标由大变小往下消失在@图标处，
+里面的元素在消失过程中保持不变，随大图标一起消失
+左下角的小图标大小不变消失在@图标处，
+里面的元素在消失过程中先直接消失，不随小图标一起消失
+大图标和小图标都消失完后，图标@再由大变小，这个停顿时间约为0.5s
+*/
+
+/*
+底部容器，将需要用到的元素都放在这个固定长度区域的容器中，
+这样方便定位，同时浏览器长宽发生变化时，元素的相对位置不会被改变
+*/
+#bottom-positioner{
+    width: 600px;
+    height: 800px;
+    position: absolute;
+    left: 30%;
+    bottom: 0%;
+    overflow: hidden;
+}
+/*
+底部的@标志
+*/
+.apb{
+    background-image: url(../assets/images/atplus_white.png);
+    background-position: center;
+    /*背景颜色可以通过取色工具获取rgb值知道*/
+    background-color:  rgb(157, 163, 211);
+    background-repeat: no-repeat;
+    background-size: 85%;
+    /*通过绝对定位方式定位鼠标移动到之前小@的位置，在页面下部居中位置*/
+    left: 50%;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    bottom: 30%;
+    /*将其背景通过设定border-radius为50%设置成圆形*/
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    /*在鼠标移开大@标志变回小@标志有一个停顿时间，
+    同时等外面的其它图标都不见后才由大@变回小@，
+    设置这个停顿时间比其它图标消失的时间长些，为1.5s*/
+    transition: all 0.5s ease-in 1.5s;
+    -o-transition: all 0.5s ease-in 1.5s;
+    -moz-transition: all 0.5s ease-in 1.5s;
+    -webkit-transition: all 0.5s ease-in 1.5s;
+    /*将apb容器放在最上方，这样不会被其它容器覆盖*/
+    z-index: 1;
+}
+/*
+鼠标移动到时，小@标志变为大@标志，
+设置这个过渡时间为0.5s
+*/
+.apb:hover {
+    background-image: url(../assets/images/atplus_green.png);
+    background-position-y: 45%;
+    background-size: 75%;
+    background-color: rgba(48, 63, 159, 1);
+    transform: scale(2);
+    transition: all 0.5s ease-out 50ms;
+    -o-transition: all 0.5s ease-out 50ms;
+    -moz-transition: all 0.5s ease-out 50ms;
+    -webkit-transition: all 0.5s ease-out 50ms;
+}
+/*
+将菜单前的那个小黑点隐藏起来
+*/
+ul{
+    list-style-type: none;
+}
+/*
+在@标志的上方，有一个大圆代表信息栏，
+这个大信息栏在鼠标移动到@图标之后出现
+*/
+.info{
+    background-color: rgb(126, 126, 126);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    bottom: 32%;
+    left: 51%;
+    position: absolute;
+    opacity: 0;
+    /*鼠标移动开@标志之后，停顿约1s大圆开始消失，
+    且里面的元素不是马上消失，而是随大圆一起消失*/
+    transition: all 0.5s ease-in 1s;
+    -o-transition: all 0.5s ease-in 1s;
+    -moz-transition: all 0.5s ease-in 1s;
+    -webkit-transition: all 0.5s ease-in 1s;
+    /*里面的元素消失过程中保持不变且没有超出大圆*/
+    overflow: hidden;
+}
+.apb:hover + #info-bar > .info{
+    position: absolute;
+    bottom: 36.5%;
+    left: 39.5%;
+    width: 155px;
+    height: 155px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    opacity: 1;
+    transition: all 0.5s ease-out 50ms;
+    -o-transition: all 0.5s ease-out 50ms;
+    -moz-transition: all 0.5s ease-out 50ms;
+    -webkit-transition: all 0.5s ease-out 50ms;
+}
+/*
+调整信息栏中元素的图片大小
+*/
+img{
+    width: 28px;
+}
+.comment img{
+    width: 30px;
+}
+/*
+通过绝对定位的方式调整信息栏中不同元素的位置，
+同时调整大小样式
+*/
+.user{
+    position: absolute;
+    top: 6.5%;
+    left: 31%;
+    padding-right: 10px;
+}
+.user span{
+    position: absolute;
+    font-size: 17px;
+    font-weight: bold;
+    color: white;
+    top: 1%;
+    left: 100%;
+}
+.comment{
+    position: absolute;
+    top: 37.5%;
+    left: 23%;
+    padding-right: 13px;
+}
+.comment span{
+    position: absolute;
+    font-size: 34px;
+    font-weight: bold;
+    color: white;
+    top: -35%;
+    left: 100%
+}
+.mine{
+    position: absolute;
+    bottom: 15%;
+    left: 15%;
+    padding-right: 7px;
+}
+.mine span{
+    color: rgb(91, 195, 172);
+    position: absolute;
+    font-weight: bold;
+    font-size: 19px;
+    bottom: 20%;
+    left: 100%;
+}
+.like{
+    position: absolute;
+    left: 54%;
+}
+/*
+用一个容器将左下角的5个元素装起来，
+便于调整它们的位置
+*/
+#control-ring-container{
+    position: absolute;
+    width: 300px;
+    height: 200px;
+    bottom: 13%;
+    left: 24.4%;
+}
+#control-ring{
+    height: 200px;
+}
+/*
+左下角的五个小图标都具有一样的背景颜色，一样都是圆形
+*/
+.button{
+    background-color:  rgb(104, 104, 104);
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 50%;
+    bottom: 65%;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: 0;
+    /*鼠标移开@图标后，大约停顿1s五个小图标才开始消失，
+    且开始消失时里面的背景图片先直接消失，五个圆形大小不变逐渐消失*/
+    transition: all 0.5s ease-in 1s;
+    -o-transition: all 0.5s ease-in 1s;
+    -moz-transition: all 0.5s ease-in 1s;
+    -webkit-transition: all 0.5s ease-in 1s;
+}
+.apb:hover ~ #control-ring-container > #control-ring > .button{
+    opacity: 1;
+    transition: all 0.5s ease-out 50ms;
+    -o-transition: all 0.5s ease-out 50ms;
+    -moz-transition: all 0.5s ease-out 50ms;
+    -webkit-transition: all 0.5s ease-out 50ms;
+}
+/*
+设置五个小图标的背景图片和位置
+*/
+.mask{
+    background-image: url(../assets/images/nomask.png);
+}
+.apb:hover ~ #control-ring-container > #control-ring > .mask{
+    position: absolute;
+    left: 25%;
+    bottom: 86%;
+}
+.history{
+    background-image: url(../assets/images/history.png);
+}
+.apb:hover ~ #control-ring-container > #control-ring > .history{
+    position: absolute;
+    left: 20.7%;
+    bottom: 63%;
+}
+.message{
+    background-image: url(../assets/images/message.png);
+}
+.apb:hover ~ #control-ring-container > #control-ring > .message{
+    position: absolute;
+    left: 26.5%;
+    bottom: 41%;
+}
+/*
+信息图标右上角的红色小圆
+*/
+.message .unread{
+    background-color: red;
+    width: 22px;
+    height: 22px;
+    color: white;
+    text-align: center;
+    font-weight: bold;
+    font-size: 15px;
+    border-radius: 50%;
+    -moz-border-radius: 50%;
+    -webkit-border-radius: 50%;
+    position: absolute;
+    right: -20%;
+    top: -10%;
+}
+.setting{
+    background-image: url(../assets/images/setting.png);
+}
+.apb:hover ~ #control-ring-container > #control-ring > .setting{
+    position: absolute;
+    left: 40%;
+    bottom: 29%;
+}
+.sign{
+    background-image: url(../assets/images/signin.png);
+}
+.apb:hover ~ #control-ring-container > #control-ring > .sign{
+    position: absolute;
+    left: 57%;
+    bottom: 30.5%;
+}

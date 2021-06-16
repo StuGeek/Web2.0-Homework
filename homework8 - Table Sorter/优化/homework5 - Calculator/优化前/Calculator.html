@@ -1,0 +1,59 @@
+<!--18322081杨宗恺，此文件为计算器的Calculator.html文件，
+	实现对计算器界面基本结构的设计和排版-->
+	<!DOCTYPE html>
+	<html lang="en">
+	
+	<head>
+		<title>简单计算器</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" type="text/css" href="css/Calculator.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+		<script src="js/Calculator.js"></script>
+	</head>
+	
+	<body>
+		<!--将整个计算器界面和标题包括在一起的一个容器-->
+		<div id="interface-container">
+			<h1>简单计算器</h1>
+			<!--计算器的界面-->
+			<div id="interface">
+				<!--显示结果的界面-->
+				<input id="result" disabled="disabled" />
+				<!--按照行来对计算器的不同按钮进行排版-->
+				<div class="row-first">
+					<!--按照计算器不同按钮所实现的不同功能对按钮进行分类-->
+					<button class="number-button">7</button>
+					<button class="number-button">8</button>
+					<button class="number-button">9</button>
+					<button class="calculator-button">/</button>
+				</div>
+				<div class="row-second">
+					<button class="number-button">4</button>
+					<button class="number-button">5</button>
+					<button class="number-button">6</button>
+					<button class="calculator-button">*</button>
+				</div>
+				<div class="row-third">
+					<button class="number-button">1</button>
+					<button class="number-button">2</button>
+					<button class="number-button">3</button>
+					<button class="calculator-button">-</button>
+				</div>
+				<div class="row-fourth">
+					<button class="number-button">0</button>
+					<button class="function-button">.</button>
+					<button class="function-button" id="back">←</button>
+					<button class="calculator-button">+</button>
+				</div>
+				<div class="row-fifth">
+					<button class="function-button">(</button>
+					<button class="function-button">)</button>
+					<button class="function-button" id="clear">CE</button>
+					<button class="calculator-button" id="equal">=</button>
+				</div>
+			</div>
+		</div>
+	</body>
+	
+	</html>

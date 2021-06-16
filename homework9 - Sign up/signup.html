@@ -1,0 +1,33 @@
+<!--18322081杨宗恺，注册界面signIn.html-->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en-US" xml:lang="en-US">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>注册系统</title>
+    <link rel="stylesheet" type="text/css" href="css/signup.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.0/jquery.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/3.10.1/lodash.js"></script>
+    <script type="text/javascript" src="js/check_signup.js"></script>
+</head>
+
+<body>
+    <h1>用户注册</h1>
+    <form action='http://localhost:8000/signup' method="POST">
+        <div id="input-information">
+            账号<input type="text" name="username" /><br />
+            学号<input type="text" name="number" /><br />
+            电话<input type="text" name="phone" /><br />
+            邮箱<input type="text" name="email" /><br />
+            <input type="reset" value="重置" />
+            <input type="submit" value="提交" />
+        </div>
+        <div id="tooltips-container">
+            <div class="tooltips" id="username-tooltips"></div>
+            <div class="tooltips" id="number-tooltips"></div>
+            <div class="tooltips" id="phone-tooltips"></div>
+            <div class="tooltips" id="email-tooltips"></div>
+        </div>
+    </form>
+</body>
+
+</html>
